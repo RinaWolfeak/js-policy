@@ -1,4 +1,4 @@
-namespace: fleet-local
+defaultNamespace: kube-system
 
 helm:
   # The release name to use. If empty a generated release name will be used
