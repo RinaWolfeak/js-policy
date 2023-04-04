@@ -1,4 +1,4 @@
-defaultNamespace: kube-system
+namespace: jspolicy
 
 helm:
   # The release name to use. If empty a generated release name will be used
@@ -10,7 +10,7 @@ helm:
   chart: jspolicy
 
   # An https to a valid Helm repository to download the chart from
-  repo: https://charts.loft.sh
+  repo: https://github.com/loft-sh/jspolicy
 
   # Used if repo is set to look up the version of the chart
   #version: ""
