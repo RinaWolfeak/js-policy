@@ -7,6 +7,6 @@ spec:
   resources: ["*"]
   scope: Namespaced
   javascript: |
-    if (request.namespace === "fleet-local") {
-      deny("Creation of resources within the fleet-local namespace is not allowed!");
+    if (request.namespace === "*") {
+      deny("Creation of resources within the any namespace is not allowed!");
     }
