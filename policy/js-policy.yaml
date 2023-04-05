@@ -4,7 +4,7 @@ metadata:
   name: "deny-default-namespace.example.com"
 spec:
   operations: ["CREATE"]
-  resources: ["*"]
+  resources: ["pods"]
   scope: Namespaced
   javascript: |
     if (request.namespace === "default") {
