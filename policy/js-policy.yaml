@@ -1,12 +1,12 @@
-apiVersion: policy.jspolicy.com/v1beta1
-kind: JsPolicy
-metadata:
-  name: "deny-default-namespace.example.com"
-spec:
-  operations: ["CREATE"]
-  resources: ["pods"]
-  scope: Namespaced
-  javascript: |
-    if (request.namespace === "default") {
-      deny("Create resources in the default namespace is not allowed!");
-    }
+#apiVersion: policy.jspolicy.com/v1beta1
+#kind: JsPolicy
+#metadata:
+#  name: "deny-default-namespace.example.com"
+#spec:
+#  operations: ["CREATE"]
+#  resources: ["pods"]
+#  scope: Namespaced
+#  javascript: |
+#    if (request.namespace === "default") {
+#      deny("Create resources in the default namespace is not allowed!");
+#    }
