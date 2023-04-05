@@ -3,10 +3,10 @@ kind: JsPolicy
 metadata:
   name: "deny-default-namespace.example.com"
 spec:
-  operations: ["DELETE"]
+  operations: ["CREATE"]
   resources: ["*"]
   scope: Namespaced
   javascript: |
     if (request.namespace === "default") {
-      deny("Delete resources in the default namespace is not allowed!");
+      deny("Create resources in the default namespace is not allowed!");
     }
