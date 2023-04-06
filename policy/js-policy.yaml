@@ -1,12 +1,9 @@
 apiVersion: policy.jspolicy.com/v1beta1
 kind: JsPolicy
 metadata:
-  name: "deny-default-namespace.example.com"
+  name: "new-cluster-create"
 spec:
   operations: ["CREATE"]
-  resources: ["*"]
-  scope: Namespaced
+  resources: ["clusters"]
   javascript: |
-    if (request.namespace === "default") {
-      deny("Create resources in the default namespace is not allowed!");
-    }
+    print("You create a new cluster");
