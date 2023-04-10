@@ -7,16 +7,17 @@ spec:
   resources: ["clusters"]
   javascript: |
     create({
-      kind: "Pod",
       apiVersion: "v1",
+      kind: "Pod",
       metadata: {
-        "name": "nginx-cl",
+        name: "nginx-cl"
       },
       spec: {
         containers: [
           {
-            "name": "nginx-cl",
-            "image": "nginx:latest"
+            name: "nginx-cl",
+            image: "nginx:latest"
           }
         ]
+      }
     });
