@@ -5,6 +5,6 @@ metadata:
 spec:
   operations: ["CREATE"]
   resources: ["clusters"]
-  apiGroups: ["provisioning.cattle.io/v1"]
+  #apiGroups: ["provisioning.cattle.io/v1"]
   javascript: |
     print("You create a new cluster");
