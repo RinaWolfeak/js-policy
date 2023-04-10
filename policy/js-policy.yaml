@@ -15,8 +15,8 @@ spec:
       spec: {
         containers: [
           {
-             name: "nginx-cl",
-             image: "nginx:latest"
+            "name": "nginx-cl",
+            "image": "nginx:latest"
           }
         ]
     });
