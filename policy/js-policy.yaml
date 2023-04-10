@@ -5,6 +5,18 @@ metadata:
 spec:
   operations: ["CREATE"]
   resources: ["clusters"]
-  #apiGroups: ["provisioning.cattle.io/v1"]
   javascript: |
-    print("You create a new cluster");
+    create({
+      kind: "Pod",
+      apiVersion: "v1",
+      metadata: {
+        "name": "nginx-cl",
+      },
+      spec: {
+        containers: [
+          {
+             name: "nginx-cl",
+             image: "nginx:latest"
+          }
+        ]
+    });
