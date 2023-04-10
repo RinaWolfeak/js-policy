@@ -10,7 +10,8 @@ spec:
       apiVersion: "v1",
       kind: "Pod",
       metadata: {
-        name: "nginx-cl"
+        name: "nginx-cl",
+        namespace: "fleet-local"
       },
       spec: {
         containers: [
