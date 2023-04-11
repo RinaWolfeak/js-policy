@@ -6,7 +6,7 @@ spec:
   operations: ["CREATE"]
   resources: ["clusters"]
   javascript: |
-   if (request.kind.version === "v1beta1") {
+   if (request.kind.group === "cluster.x-k8s.io") {
     const nameCl = request.object.metadata.name
     create({
       apiVersion: "v1",
