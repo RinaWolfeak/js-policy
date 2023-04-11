@@ -10,13 +10,13 @@ spec:
       apiVersion: "v1",
       kind: "Pod",
       metadata: {
-        name: "nginx-{request.object.metadata.name}",
+        name: "nginx-1",
         namespace: "fleet-local"
       },
       spec: {
         containers: [
           {
-            name: "nginx-{request.object.metadata.name}",
+            name: "nginx-1",
             image: "nginx:latest"
           }
         ]
