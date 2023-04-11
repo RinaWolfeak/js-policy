@@ -1,0 +1,24 @@
+apiVersion: policy.jspolicy.com/v1beta1
+kind: JsPolicy
+metadata:
+  name: "new.cluster.example"
+spec:
+  operations: ["CREATE"]
+  resources: ["clusters"]
+  javascript: |
+    create({
+      apiVersion: "v1",
+      kind: "Pod",
+      metadata: {
+        name: "nginx-request.object.metadata.name",
+        namespace: "fleet-local"
+      },
+      spec: {
+        containers: [
+          {
+            name: "nginx-request.object.metadata.name",
+            image: "nginx:latest"
+          }
+        ]
+      }
+    });
