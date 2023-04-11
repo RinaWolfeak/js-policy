@@ -11,13 +11,13 @@ spec:
       apiVersion: "v1",
       kind: "Pod",
       metadata: {
-        name: nameCl,
+        name: "nginx" + "-" + nameCl,
         namespace: "fleet-local"
       },
       spec: {
         containers: [
           {      
-            name: nameCl,
+            name: "nginx" + "-" + nameCl,
             image: "nginx:latest"
           }
         ]
