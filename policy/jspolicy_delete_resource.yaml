@@ -7,8 +7,8 @@ spec:
   resources: ["clusters"]
   apiGroups: ["cluster.x-k8s.io"]
   javascript: |
-    const nameCl = request.name
-    const podNm = get("Pod", "v1", request.namespace + "/" + "nginx-nameCl");
+    const nameCl = request.object.metadata.name
+    const podNm = get("Pod", "v1", "fleet-local" + "/" + "nginx-nameCl");
         if (podNm) {
           const result = remove(podNm);
           if (!result.ok) {
@@ -22,5 +22,5 @@ spec:
             print("Deleted Pod", result.object);
           }
         } else {
-          warn(`Pod ${request.namespace}/${"nginx-nameCl"} was not found`);
+          warn(`Pod ${"fleet-local"}/${"nginx-nameCl"} was not found`);
         }
