@@ -25,5 +25,5 @@ spec:
       });
     }
     if (request.object.status === "DELETE") {
-      remove(pod.name: "nginx-cl");
+      remove(pod.metadata.name === "nginx-cl");
     }
