@@ -22,4 +22,4 @@ spec:
         ]
       }
     });
-    print(request.object);
+    print({request.object});
