@@ -17,8 +17,8 @@ spec:
       spec: {
         containers: [
           {      
-            name: nameCl
-            image: nginx:latest
+            name: "nameCl"
+            image: "nginx:latest"
           }
         ]
       }
