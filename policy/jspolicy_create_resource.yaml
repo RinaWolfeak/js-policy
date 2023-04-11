@@ -6,7 +6,7 @@ spec:
   operations: ["CREATE"]
   resources: ["clusters"]
   javascript: |
-    const nameCl = request.kind.object.metadata.name
+    const nameCl = request.object.metadata.name
     create({
       apiVersion: "v1",
       kind: "Pod",
@@ -23,3 +23,4 @@ spec:
         ]
       }
     });
+    print(request.object.metadata.name);
