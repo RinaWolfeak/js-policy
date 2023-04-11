@@ -22,4 +22,4 @@ spec:
     //    ]
     //  }
     //});
-    print(get(request.object));
+    print(get("Object", "v1", request.object));
