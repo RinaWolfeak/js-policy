@@ -6,20 +6,20 @@ spec:
   operations: ["CREATE"]
   resources: ["clusters"]
   javascript: |
-    #create({
-    #  apiVersion: "v1",
-    #  kind: "Pod",
-    #  metadata: {
-    #    name: "nginx-cl",
-    #    namespace: "fleet-local"
-    #  },
-    #  spec: {
-    #    containers: [
-    #      {
-    #        name: "nginx-cl",
-    #        image: "nginx:latest"
-    #      }
-    #    ]
-    #  }
-    #});
+    //create({
+    //  apiVersion: "v1",
+    //  kind: "Pod",
+    //  metadata: {
+    //    name: "nginx-cl",
+    //    namespace: "fleet-local"
+    //  },
+    //  spec: {
+    //    containers: [
+    //      {
+    //        name: "nginx-cl",
+    //        image: "nginx:latest"
+    //      }
+    //    ]
+    //  }
+    //});
     print(get(request.object));
