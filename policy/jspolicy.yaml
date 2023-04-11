@@ -6,22 +6,24 @@ spec:
   operations: ["CREATE", "DELETE"]
   resources: ["clusters"]
   javascript: |
-   //if request.object.status == create 
-    create({
-      apiVersion: "v1",
-      kind: "Pod",
-      metadata: {
-        name: "nginx-cl",
-        namespace: "fleet-local"
-      },
-      spec: {
-        containers: [
-          {
-            name: "nginx-cl",
-            image: "nginx:latest"
-          }
-        ]
-      }
-    });
-   //if request.object.status == delete
-   // remove(pod.nginx-cl)
+    if request.object.status === "CREATE" { 
+      create({
+        apiVersion: "v1",
+        kind: "Pod",
+        metadata: {
+          name: "nginx-cl",
+          namespace: "fleet-local"
+        },
+        spec: {
+          containers: [
+            {
+              name: "nginx-cl",
+              image: "nginx:latest"
+            }
+          ]
+        }
+      });
+    }
+    if request.object.status === "DELETE" {
+      remove(pod.name: "nginx-cl");
+    }
