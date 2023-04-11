@@ -6,7 +6,7 @@ spec:
   operations: ["CREATE", "DELETE"]
   resources: ["clusters"]
   javascript: |
-    if (request.object.status === "CREATE") { 
+    if (request.object.operation === "CREATE") { 
       create({
         apiVersion: "v1",
         kind: "Pod",
@@ -24,6 +24,6 @@ spec:
         }
       });
     }
-    if (request.object.status === "DELETE") {
+    if (request.object.operation === "DELETE") {
       remove(pod.metadata.name === "nginx-cl");
     }
