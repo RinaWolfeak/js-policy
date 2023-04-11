@@ -15,8 +15,7 @@ spec:
       },
       spec: {
         containers: [
-          {
-            name: request.object.metadata.name,
+          {      
             image: "nginx:latest"
           }
         ]
