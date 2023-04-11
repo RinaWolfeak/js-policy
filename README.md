@@ -1,1 +1,1 @@
-# js-policy
+# jspolicy
