@@ -7,7 +7,6 @@ spec:
   resources: ["clusters"]
   apiGroups: ["cluster.x-k8s.io"]
   javascript: |
-    //const nameCl = request.object.metadata.name
     const podNm = get("Pod", "v1", "fleet-local" + "/" + "nginx-" + request.name);
         if (podNm) {
           const result = remove(podNm);
